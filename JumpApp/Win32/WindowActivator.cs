@@ -8,11 +8,17 @@ namespace JumpApp.Win32
     {
         public static void Activate(IntPtr hWnd)
         {
-            ShowWindow(hWnd, ShowWindowEnum.Restore);
+            var isMinimzied = IsIconic(hWnd);
+            if (isMinimzied)
+                ShowWindow(hWnd, ShowWindowEnum.Restore);
 
             if (!SetForegroundWindow(hWnd))
                 throw new Win32Exception(Marshal.GetLastWin32Error());
         }
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool IsIconic(IntPtr hWnd);
 
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
