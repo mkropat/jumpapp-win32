@@ -1,9 +1,9 @@
 # jumpapp-win32
 
-*Jump to another application. Always. **Windows Version***
+*Jump to another application. Always. __Windows Version__*
 
-**JumpApp** focuses the window of the application you're interested in —
-assuming it's already running — otherwise **JumpApp** launches the application
+**JumpApp** focuses the window of the application you're interested in â€”
+assuming it's already running â€” otherwise **JumpApp** launches the application
 for you.
 
 It the application is running and one of its windows is already focused,
